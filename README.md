@@ -43,7 +43,8 @@ Note: Remember the url from mongodb into Docker is mongodb://mongodb:27017/
     ssh user@localhost -p 2222
 
     The output will look similar to: 
-         ###############################################################
+
+        ###############################################################
         ## Docker SSH ~ Because every container should be accessible ##
         ###############################################################
         ## container | /container-name                               ##

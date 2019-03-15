@@ -35,10 +35,11 @@ Note: Remember the url from mongodb into Docker is mongodb://mongodb:27017/
 ## Add SSH capabilities to nodejs container
 
 1. `Run the following command to start Docker-SSH`
-    docker run -e FILTERS={\"name\":[\"^/container-name$\"]} -e AUTH_MECHANISM=noAuth \
-  --name new-container -p 2222:22  --rm \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  jeroenpeeters/docker-ssh
+
+        docker run -e FILTERS={\"name\":[\"^/container-name$\"]} -e AUTH_MECHANISM=noAuth \
+            --name new-container -p 2222:22  --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            jeroenpeeters/docker-ssh
 2. `Access the container through SSH`
 
 ssh user@localhost -p 2222

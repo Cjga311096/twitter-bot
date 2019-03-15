@@ -40,9 +40,10 @@ Note: Remember the url from mongodb into Docker is mongodb://mongodb:27017/
   -v /var/run/docker.sock:/var/run/docker.sock \
   jeroenpeeters/docker-ssh
 2. `Access the container through SSH`
-    ssh user@localhost -p 2222
 
-    The output will look similar to: 
+ssh user@localhost -p 2222
+
+The output will look similar to: 
 
         ###############################################################
         ## Docker SSH ~ Because every container should be accessible ##
@@ -52,6 +53,9 @@ Note: Remember the url from mongodb into Docker is mongodb://mongodb:27017/
 
         /docker $
 3. `cd src`
-    output 
-        /docker $
+
+output: 
+
+    /docker/src $
+
 4. `Run node app.js "Hashtag" "Tweets limits" "Interval"`

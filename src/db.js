@@ -11,7 +11,7 @@ function connectToDatabase() {
         .then(db => {
             isConnected = db.connections[0].readyState;
         }).catch(error=>{
-            console.log(`Error al conectar con ${config.mongo.url}`);
+            console.log(`${new Date().toISOString()} => Error al conectar con ${config.mongo.url}`);
         });
 }
 

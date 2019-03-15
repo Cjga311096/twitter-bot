@@ -1,0 +1,21 @@
+version: '2' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  node:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    networks:
+      - twitternetwork
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - twitternetwork
+networks:
+  twitternetwork:
+      driver: bridge

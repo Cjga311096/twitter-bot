@@ -14,4 +14,4 @@ COPY . /docker
 
 EXPOSE 5000
 
-CMD ["node","./src/app","#btc","10","15"]
+CMD ["node","./src/app","#bitcoin","10"]

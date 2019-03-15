@@ -8,6 +8,9 @@ const model = require('./model.js');
 
 const T = new Twit(config["twitter"]);
 console.log('Configurando instancia...');
+console.log(`${new Date().toISOString()} => Hashtag: ${hashtag} \r\n`);
+console.log(`${new Date().toISOString()} => Tweets Limit: ${limit} \r\n`);
+console.log(`${new Date().toISOString()} => Interval: ${interval} \r\n`);
 
 const filter = () =>{
   T.get('search/tweets', { q: hashtag, count: limit }, function(err, reply) {
@@ -37,9 +40,17 @@ const filter = () =>{
     console.log(`${new Date().toISOString()} => Se encontraron ${tweets.length} tweets \r\n`);
   });
 }
-console.log(`${new Date().toISOString()} => Filtrando tweets con el hashtag: ${hashtag} \r\n`);
-filter();
-setInterval(()=>{
+
+const handleError = (error) => {
+  clearInterval(handleInterval);
+  console.log(`${new Date().toISOString()} => ${error}`);
+}
+
+const handleInterval = setInterval(()=>{
   console.log(`${new Date().toISOString()} => Filtrando tweets con el hashtag: ${hashtag} \r\n`);
   filter();
-},interval*60000);
+},interval);
+console.log(`${new Date().toISOString()} => Filtrando tweets con el hashtag: ${hashtag} \r\n`);
+filter();
+
+

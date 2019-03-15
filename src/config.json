@@ -1,9 +1,9 @@
 {
     "twitter": {
-        "consumer_key": "",
-        "consumer_secret": "",
-        "access_token": "",
-        "access_token_secret": "",
+        "consumer_key": "f8in2dpyLch5UQwENylpXS3bg",
+        "consumer_secret": "AoPiATUHckcJGYObJRhgWAXNckCUJLYDk8qZdEvVsb5xPbkNMM",
+        "access_token": "296319203-4G8JsbTzZajyaewwKYZLtx4JKsJz0tnLZ9AEatfj",
+        "access_token_secret": "hQE8C7QZMg60RN0A8OyPO7EUy7no0JGbTtfItuiUN7B5S",
         "timeout_ms": 60000,
         "strictSSL": true
     },

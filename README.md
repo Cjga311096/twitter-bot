@@ -58,3 +58,5 @@ output:
     /docker/src $
 
 4. `Run node app.js ""Hashtag"" ""Tweets limits"" ""Interval""`
+
+for more information: https://github.com/jeroenpeeters/docker-ssh

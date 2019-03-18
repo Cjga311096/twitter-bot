@@ -19,10 +19,9 @@ A twitter bot using Twit and Mongoose.
 4. `cd ./src`
 5. `node app.js "Hashtag" "Tweets limits" "Interval"`
 
-Notes: 
-    1. Change the url from mongodb into config to localhost
-    2. Tweets limits and Interval are optional. By default Tweets limits is 20 and Inteval 15min
-    3. To set the interval, you must enter the time in milliseconds.
+Notes:
+    1. Tweets limits and Interval are optional. By default Tweets limits is 20 and Inteval 15min
+    2. To set the interval, you must enter the time in milliseconds.
 
 ## Usage with Docker Compose
 
@@ -30,7 +29,6 @@ Notes:
 2. `Run docker-compose build`
 3. `Run docker-compose up`
 
-Note: Remember the url from mongodb into Docker is mongodb://mongodb:27017/
 
 ## Add SSH capabilities to nodejs container
 
